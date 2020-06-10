@@ -1,0 +1,29 @@
+todo elemento de javascript fica dentro das tags <script><script>
+essas tags podem ser colocadas no header ou no body da página, porém, é uma boa prática deixa-las no final para que o navegador tenha tempo de carregar todos os elementos.
+
+2) A declaração de variáveis no javascript é dada pela palavra var (também é verdade que existe a palavra let, mas vamos deixar isso para depois)
+
+
+3) O DOM (document object model) é um objeto que representa todos os elementos que estão dentro da página.
+ele pode ser acessado no javascript pelo elemento "document"
+Para ver isso, digite apenas "document" no console do se navegador e então você identificará isso.
+
+4) Para recuperar um elemento específico dentro do DOM você precisa utilizar o método querySelector("")
+Dentro desse seletor, você deverá passar o elemento seletor que você deseja encontrar, ex:
+        document.querySelector("h1")
+        A linha acima trará os dados da tag <h1>
+        
+        temos outros seletores
+                    //var titulo = document.querySelector("h1");
+                    //var titulo = document.querySelector(".titulo");  //  Seletor css para classe
+                    //var titulo = document.querySelector("#titulo"); // seletor css para o id.
+                    //var titulo = document.querySelector("[titulo]"); // seletor css para um atributo
+        
+5) para recuperar o valor dentro da tag <h1>casa da dinda</h1>, voce deverá utilizar a função "currentText"
+    Ex:  document.querySelector("h1").textContent 
+        > casa da dinda.
+    
+    
+6) para carregar um arquivo externo javascript eu abro as mesmas tags <script> porém, agora eu indico, logo na abertura, que o script terá uma fonte externa, e por fonte podemos identificar que o atributo para resolver isso é o src (source) então vamos referenciar os arquivos criados 
+    ex: <script src="js/principal.js"></script>
+
