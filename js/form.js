@@ -1,5 +1,7 @@
 var botao = document.querySelector("#adicionar-paciente");
 
+
+
 botao.addEventListener("click", function (event) {
     event.preventDefault(); // event é um objeto que armazena os dados do evento.    
     //console.log("Oi, eu sou o botão e fui clicado.");
@@ -129,3 +131,5 @@ function exibeMensagensDeErro(erros){
 //titulo.addEventListener("click", function(){
 //    console.log("hello! i was clicked.");
 //})
+
+

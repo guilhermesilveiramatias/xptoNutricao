@@ -1,6 +1,12 @@
 var botaoAdicionar = document.querySelector("#buscar-pacientes");
 
+
+var modal = document.querySelector("#modal");
+var botaoFecharModal = document.querySelector("#modal .content .header a");
+
 botaoAdicionar.addEventListener("click", function(){
+
+    modal.classList.remove("invisivel");
 
     // Busca os pacientes da API.
 
@@ -29,6 +35,11 @@ botaoAdicionar.addEventListener("click", function(){
             pacientes.forEach(function(paciente) {
                 adicionaPacienteNaTabela(paciente);            
             });
+
+
+            setTimeout(function(){
+                modal.classList.add("invisivel");
+            }, 500);
         }
         else
         {
@@ -48,4 +59,9 @@ botaoAdicionar.addEventListener("click", function(){
 
 
 
+
 })
+
+
+botaoFecharModal.addEventListener("click", () => {modal.classList.add("invisivel")});
+

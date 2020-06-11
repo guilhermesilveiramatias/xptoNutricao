@@ -155,6 +155,91 @@ button[disabled=disabled], button:disabled {
 	margin-bottom: 10px;
 }
 
+/* --------------------------------------
+ O CSS vai buscar os elementos mais específicos, então abaixo eu digo 
+ que se a minha modal tiver uma classe invisível, ela sobrescreverá 
+ o display flex que o modificador #modal escreveu.
+ ------------------------------------------*/
+#modal.invisivel{
+	display: none;
+}
+
+
+#modal{	
+	/* [Início] isso cria um efeito em que a div vai ficar sobre toda a tela. */
+	height: 100vh;
+	width: 100vw;
+	background-color: #051325bb;  /* Criando cor de fundo com transparência */
+	position:fixed;
+	top:0px;
+	left: 0px;	
+	/* [Fim] isso cria um efeito em que a div vai ficar sobre toda a tela. */
+
+	/* [Início] tratando o conteúdo da modal */
+	display:flex;  /*isso fará os elementos dentro da modal assumirem o comportamento de caixa flex. */
+	align-items: center; /* coloca os itens ao centro (sentido  vertical) da modal */
+	justify-content: center; /*  alinha ao centro (sentido horizontal) */
+	/* [Final] tratando o conteúdo da modal */	
+}
+
+
+#modal .content{
+	/*background-color:#ccc;*/
+	background: rgba(0,0,0,0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+	width: 420px;
+	height: 160px;
+	border-radius: 8px 0px 8px 0px;
+	box-shadow: 1px 0px 9px 6px rgba(235, 232, 232, 0.2);
+	
+	
+}
+
+#modal .header{
+	background-color: lightcoral;
+	height: 36px;
+	align-items: center;
+	display:flex;
+	padding: 0px 6px;
+	justify-content: space-between; /* coloca um espaço entre os itens */
+	border-radius: 8px 0px 0px 0px;
+	color: white;
+	font-size: bold;
+}
+
+#modal .header a{
+	background-image: url("../img/x.svg");
+	height: 24px;
+	width: 24px;
+	
+	font-size: 0.01px;
+}
+
+#modal .modalBody{
+	
+	/*padding: 30px 48px;*/
+	display:flex;
+	/*justify-content: space-around;*/
+	height: 128px;
+	align-items: center;
+	justify-content: center;
+}
+
+#modal .content .modalBody .icone{
+	background-image: url("../img/loading.svg");
+	height: 48px;
+	width: 48px;
+	
+}
+
+#modal .content .modalBody p{	
+	margin-left: 6px;
+	width: 200px;
+	color: white;
+}
+
+
 
 .invisivel{
 	display: none;
